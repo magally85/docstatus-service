@@ -1,0 +1,5 @@
+[2026-04-18T04:03:45.122Z] DocGUI=testGUID, Estado=Signed, Usuario=mysubs
+[2026-04-18T04:06:23.867Z] ERROR: Autenticación fallida para usuario=mysubs
+[2026-04-18T04:06:25.256Z] ERROR: Autenticación fallida para usuario=mysubs
+[2026-04-18T04:06:26.437Z] ERROR: Autenticación fallida para usuario=mysubs
+[2026-04-18T04:06:29.782Z] DocGUI=testGUID, Estado=Signed, Usuario=mysubs

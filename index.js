@@ -17,6 +17,7 @@ function authMiddleware(req, res, next) {
   if (!authHeader || !authHeader.startsWith('Basic ')) {
     const logEntry = `[${timestamp}] ERROR: Falta header de autorización`;
     fs.appendFileSync(logFile, logEntry + '\n', 'utf8');
+    console.error(logEntry); // 👈 Render lo mostrará en Logs
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
@@ -26,6 +27,7 @@ function authMiddleware(req, res, next) {
   if (user !== process.env.AUTH_USER || pass !== process.env.AUTH_PASS) {
     const logEntry = `[${timestamp}] ERROR: Autenticación fallida para usuario=${user}`;
     fs.appendFileSync(logFile, logEntry + '\n', 'utf8');
+    console.error(logEntry); // 👈 Render lo mostrará en Logs
     return res.status(403).json({ error: 'Forbidden' });
   }
 
